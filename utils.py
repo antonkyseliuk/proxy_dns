@@ -15,10 +15,8 @@ def parse_settings(filename):
 
 
 def is_blacked(domain, blacklist):
-    blacked = True
+    for item in blacklist:
+        if domain.matchSuffix(item):
+            return True
 
-    for item in blacklist.keys():
-        blacked = True if domain.matchSuffix(item) else False
-
-    return blacked
-
+    return False
