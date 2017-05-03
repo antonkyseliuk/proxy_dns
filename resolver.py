@@ -4,7 +4,12 @@ from utils import is_blacked
 
 
 class Resolver(BaseResolver):
-
+    """
+        Simply modified resolver for DNS proxy:
+        - overridden resolve method. Added check for requested domain. 
+        If it is not in blacklist resolver sends request to upstream server, 
+        else proxy server sends reply back to client with error code. 
+    """
     def __init__(self, addr, port, black_code, blacklist):
         self.addr = addr
         self.port = port

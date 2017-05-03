@@ -1,6 +1,6 @@
 from time import sleep
 from utils import parse_settings
-from proxy import Resolver
+from resolver import Resolver
 from dnslib.server import DNSServer, DNSLogger, DNSHandler
 
 
