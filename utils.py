@@ -2,6 +2,9 @@ from configparser import ConfigParser
 
 
 def parse_settings(filename):
+    """
+        Function to parse settings from configuration file
+    """
     settings = dict()
     config = ConfigParser(allow_no_value=True)
     config.read(filename)
@@ -15,6 +18,9 @@ def parse_settings(filename):
 
 
 def is_blacked(domain, blacklist):
+    """
+        Function returns True if domain in the blacklist
+    """
     for item in blacklist:
         if domain.matchSuffix(item):
             return True
