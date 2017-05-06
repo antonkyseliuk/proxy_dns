@@ -8,6 +8,7 @@ For start test execute test.py with python3.
 Required args:
 - domain
 - qtype
+
 Options:
 --tcp (sends tcp packets instead udp if enabled)
 
